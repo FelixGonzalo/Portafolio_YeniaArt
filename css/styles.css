@@ -2,13 +2,20 @@ body, h1, p{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: olivier, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, white, var(--yellow2));
 }
 
 :root {
     --gray1:#707070;
     --gray2: #AAA3A3;
     --brown1: #4F3939;
+    --brown2: #613030;
+    --yellow1: #F9EC94;
+    --yellow2: #F8FF3C;
 }
 
 /* ---- header ----- */
@@ -29,7 +36,6 @@ header {
 
 .titulo {
     color: var(--brown1);
-    font-family: olivier;
     font-size: 60px;
 }
 
@@ -45,7 +51,7 @@ header {
     display: inline-block;
     box-sizing: border-box;
     border: 2px solid var(--gray2);
-    padding: 5px 10px;    
+    padding: 5px 10px 2px;    
     border-radius: 10px; 
 }
 
@@ -60,7 +66,82 @@ header {
 
 /* ---- Menu ----*/
 
+.menu {
+    background-color: var(--yellow1);
+    border-radius: 0 100px 100px 0;
+    max-width: 791px;
+    width: 95%;
+    height: 50px;
+}
+
+.menu__frase, .menu__opcion {
+    display: inline-block;
+    margin: 10px;
+}
+
 .menu__icono {
     width: 25px; 
     height: 15px;
+    margin-left: 15px;
+    transform: rotate(90deg);
+}
+
+.menu__frase {
+    font-size: 20px;
+    color: var(--brown1);
+    margin-right: 30px;
+}
+
+.menu__opcion {
+    font-size: 25px;
+    color: var(--brown2);
+}
+
+/* ---- main ---- */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row ;
+    margin: 20px 0px;
+    justify-content: center;
+}
+
+.card {
+    border: 3px solid black;
+    width: 300px;
+    height: 300px;
+    margin: 20px 30px;
+    border-radius: 20px 0 20px 0;
+}
+
+.card__img {
+    display: inline;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px 0 20px 0;
+}
+
+/* ---- footer ---- */
+
+footer {
+    border: 1px solid var(--gray1);
+    background: var(--yellow1);
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.YeniaArt-logo {
+    width: 131px;
+    height: 130px;
+    margin: 20px;
+    border: 1px solid var(--gray1);
+}
+
+.contacto {
+    margin: 20px;
+    color: var(--brown2);
+    text-align: center;
 }
