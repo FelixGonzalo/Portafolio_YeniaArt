@@ -6,7 +6,7 @@ body, h1, p{
 }
 
 body {
-    background: linear-gradient(to bottom, white, var(--yellow2));
+    background: linear-gradient(to bottom, var(--fondo1), var(--fondo2));
 }
 
 :root {
@@ -14,8 +14,11 @@ body {
     --gray2: #AAA3A3;
     --brown1: #4F3939;
     --brown2: #613030;
+    --fondo1: #ffffff;
+    --fondo2: #F8FF3C;
     --yellow1: #F9EC94;
-    --yellow2: #F8FF3C;
+    --yellow2: #FFF9CD;
+    --footer: var(--yellow1);
 }
 
 /* ---- header ----- */
@@ -26,6 +29,7 @@ header {
     margin-top: 30px;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .flor {
@@ -51,7 +55,7 @@ header {
     display: inline-block;
     box-sizing: border-box;
     border: 2px solid var(--gray2);
-    padding: 5px 10px 2px;    
+    padding: 5px 10px 1px;    
     border-radius: 10px; 
 }
 
@@ -88,14 +92,36 @@ header {
 
 .menu__frase {
     font-size: 20px;
-    color: var(--brown1);
+    color: var(--brown2);
     margin-right: 30px;
 }
 
 .menu__opcion {
     font-size: 25px;
-    color: var(--brown2);
+    color: var(--brown1);
 }
+
+/* ---- menu celular ---- */
+
+.menu-celular {
+    padding-top: 20px;
+    background-color: var(--yellow2);
+    margin-left: 20px;
+    width: 210px;
+    height: 100px;
+    position: absolute;
+    border-bottom: 1px solid var(--brown2);
+    border-right: 1px solid var(--brown2);
+    border-left: 1px solid var(--brown2);
+    border-radius: 0px 0px 20px 20px;
+}
+
+.menu__opcion-celular {
+    color: var(--brown2);
+    margin-left: 40px;
+    font-size: 20px;
+}
+
 
 /* ---- main ---- */
 
@@ -108,7 +134,7 @@ main {
 }
 
 .card {
-    border: 3px solid black;
+    border: 3px solid var(--brown1);
     width: 300px;
     height: 300px;
     margin: 20px 30px;
@@ -126,7 +152,7 @@ main {
 
 footer {
     border: 1px solid var(--gray1);
-    background: var(--yellow1);
+    background: var(--footer);
     display: flex;
     height: 200px;
     justify-content: space-between;
@@ -144,4 +170,19 @@ footer {
     margin: 20px;
     color: var(--brown2);
     text-align: center;
+    font-size: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --gray1: #C9C9C9;
+        --gray2: #AAA3A3;
+        --brown1: #EFEDED;
+        --brown2: #C9C9C9;
+        --fondo1: #1E3A55;
+        --fondo2: #89253E;
+        --yellow1: #89253E;
+        --yellow2: #530F20;
+        --footer: var(--fondo1);
+    }
 }
