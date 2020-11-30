@@ -77,6 +77,7 @@ header {
     max-width: 791px;
     width: 95%;
     height: 50px;
+    border: 1px solid var(--gray1);
 }
 
 .menu__frase, .menu__opcion {
