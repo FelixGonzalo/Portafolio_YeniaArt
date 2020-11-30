@@ -6,10 +6,12 @@
     <title>YeniaArt</title>
     <link rel="shortcut icon" href="images/icon-yeniaArt.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nerko+One&family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img class="titulo__img" src="images/flor.svg" alt="">
+        <img id="titulo__img1" class="titulo__img" src="images/flor.svg" alt="">
         <div>
             <h1 class="titulo">YeniaArt</h1>
             <p class = "subTitulo">Portafolio</p>
@@ -18,22 +20,24 @@
                 <a href="https://www.facebook.com/YeniaArt-113697357219555"  target = "_blank" ><img class = "red-social" src="images/icon-facebook.svg" alt=""></a> 
             </div>
         </div>
-        <img class="titulo__img" src="images/flor.svg" alt="">
+        <img id="titulo__img2" class="titulo__img" src="images/flor.svg" alt="">
     </header>
 
-    <div class="menu-container">
-        <div class="menu">
-            <img class = "menu__icono" src="images/triangulo.svg" alt="" >
-            <p class ="menu__frase">Con mi propia letra</p>
-            <p class ="menu__opcion">Apuntes</p>
-            <p class ="menu__opcion">Frases</p>
-            <p class ="menu__opcion">Cajas y Bolsas</p>
+    <div class="menu">
+        <img class = "menu__icono" src="images/triangulo.svg" alt="" > 
+        <p class ="menu__frase">Con mi propia letra</p>
+        <p class ="menu__opcion">Apuntes</p>
+        <p class ="menu__opcion">Frases</p>
+        <p class ="menu__opcion">Cajas y Bolsas</p>
+        <div class="darkmode">
+            <input type="checkbox" id="darkmode__checkbox" class = "darkmode__checkbox">
+            <label class="darkmode__switch" for="darkmode__checkbox"></label>
         </div>
-        <div class="menu-celular">
-            <p class ="menu__opcion-celular">- Apuntes</p>
-            <p class ="menu__opcion-celular">- Frases</p>
-            <p class ="menu__opcion-celular">- Cajas y Bolsas</p>
-        </div>
+    </div>
+    <div class="menu-celular">
+        <p class ="menu__opcion-celular">- Apuntes</p>
+        <p class ="menu__opcion-celular">- Frases</p>
+        <p class ="menu__opcion-celular">- Cajas y Bolsas</p>
     </div>
     <main id="lista-trabajos">      
         <article class="card">

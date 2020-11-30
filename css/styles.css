@@ -2,7 +2,7 @@ body, h1, p{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: olivier, sans-serif;
+    font-family: 'olivier','Sansita Swashed', cursive, sans-serif;
     user-select: none;
 }
 
@@ -30,7 +30,7 @@ header {
     margin-top: 30px;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .titulo__img {
@@ -42,12 +42,13 @@ header {
 .titulo {
     color: var(--brown1);
     font-size: 60px;
+    margin-bottom: 8px;
 }
 
 .subTitulo {
     display: inline-block;
     color: var(--gray1);
-    font-family: Viner Hand ITC; 
+    font-family: Viner Hand ITC, 'Sansita Swashed' ; 
     font-size: 20px;
     margin-right: 10px;
 }
@@ -56,7 +57,7 @@ header {
     display: inline-block;
     box-sizing: border-box;
     border: 2px solid var(--gray2);
-    padding: 5px 10px 1px;    
+    padding: 5px 5px 1px 10px;    
     border-radius: 10px; 
 }
 
@@ -78,6 +79,8 @@ header {
     width: 95%;
     height: 50px;
     border: 1px solid var(--gray1);
+    display: flex;
+    align-items: center;
 }
 
 .menu__frase, .menu__opcion {
@@ -131,6 +134,48 @@ header {
     cursor: pointer;
     color: var(--gray1);
 }
+
+/* ---- darkMode ---- */
+
+.darkmode {
+    display: inline-block;
+    margin: auto;
+    margin-right: 10px;
+}
+
+.darkmode__checkbox {
+    display: none;
+}
+
+.darkmode__switch {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 45px;
+    height: 25px;
+    border-radius: 20px;
+    border: 10px solid var(--gray1);
+    background-color: var(--fondo1);
+}
+
+
+.darkmode__checkbox:checked ~ .darkmode__switch:before{
+    transform: translateX(12px);
+}
+
+.darkmode__switch:before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: var(--gray2);
+    border: 2px solid var(--fondo1);
+    border-radius: 100%;
+    transform: translateX(-5px);
+    transition: .3s;
+}
+
+
 /* ---- main ---- */
 
 main {
@@ -145,7 +190,7 @@ main {
     border: 3px solid var(--brown1);
     width: 300px;
     height: 300px;
-    margin: 20px 30px;
+    margin: 10px 10px;
     border-radius: 20px 0 20px 0;
 }
 
@@ -170,12 +215,12 @@ footer {
 .YeniaArt-logo {
     width: 131px;
     height: 130px;
-    margin: 20px;
+    margin-left: 20px;
     border: 1px solid var(--gray1);
 }
 
 .contacto {
-    margin: 20px;
+    margin-right: 40px;
     color: var(--brown2);
     text-align: center;
     font-size: 20px;
@@ -188,13 +233,26 @@ footer {
         display: none;
     }
 
-    .menu-container:hover .menu-celular {
-        display: block;
+    .titulo__img {
+        height: 35px;
+        width: 40px;
+        margin: 0px 16px;
     }
-
 }
 
 /*phone vertical*/
 @media (max-width: 576px) {
     
+}
+
+.modoDark {
+    --gray1: #C9C9C9;
+    --gray2: #AAA3A3;
+    --brown1: #EFEDED;
+    --brown2: #C9C9C9;
+    --fondo1: #1E3A55;
+    --fondo2: #89253E;
+    --yellow1: #89253E;
+    --yellow2: #530F20;
+    --footer: var(--fondo1);
 }
