@@ -7,7 +7,7 @@ body, h1, p{
 }
 
 body {
-    background: linear-gradient(to bottom, var(--fondo1), var(--fondo2));
+    background: linear-gradient(to bottom, var(--fondo1), var(--yellow2));
 }
 
 :root {
@@ -121,6 +121,7 @@ header {
     border-radius: 0px 0px 20px 20px;
     /*funcionalidad*/
     display: none;
+    z-index: 1;
 }
 
 .menu__opcion-celular {
@@ -192,6 +193,7 @@ main {
     height: 300px;
     margin: 10px 10px;
     border-radius: 20px 0 20px 0;
+    position: relative;
 }
 
 .card__img {
@@ -199,6 +201,31 @@ main {
     width: 300px;
     height: 300px;
     border-radius: 20px 0 20px 0;
+    object-fit: cover;
+}
+
+.card_id { 
+    background-color: var(--fondo1);
+    border: 3px solid var(--brown1);
+    color: var(--brown1);
+    border-radius: 10px 10px 0px 0px;
+    width: 35px;
+    height: 20px;
+    position: absolute;
+    top: 277px;
+    left: 7px;
+    text-align: center;
+}
+
+.card_id p {
+    margin-top: 4px;
+    font-family: Verdana;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.card:hover .card_id{
+    background-color: var(--yellow1);
 }
 
 /* ---- footer ---- */

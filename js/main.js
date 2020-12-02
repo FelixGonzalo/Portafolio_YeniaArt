@@ -2,20 +2,31 @@
 
 const listaTrabajos = document.querySelector('#lista-trabajos');
 
-function getInfo(){
-    fetch('data/apuntes.json')
+function getInfo(urlJson, tipo){
+    fetch(urlJson)
     .then(data => data.json())
     .then(data => {
-        listaTrabajos.innerHTML = '';
+        listaTrabajos.innerHTML = ''
         for (let trabajo of data) {
             listaTrabajos.innerHTML += `
             <article class="card">
                 <img class ="card__img" src="${trabajo.img}" alt="Apunte YeniaArt">
+                <div class="card_id" ><p>${tipo}00${trabajo.id}</p></div>
             </article> `
         }
     })
 }
-getInfo();
+getInfo('data/cajasYbolsas.json','C')
+
+/* ---- Filtros de trabajos*/
+
+document.querySelector('#opApuntes').addEventListener('click', (e) => getInfo('data/apuntes.json','A'));
+document.querySelector('#opFrases').addEventListener('click', (e) => getInfo('data/frases.json','F'));
+document.querySelector('#opCajasYbolsas').addEventListener('click', (e) => getInfo('data/cajasYbolsas.json','C'));
+
+document.querySelector('#opApuntes-celular').addEventListener('click', (e) => getInfo('data/apuntes.json','A'));
+document.querySelector('#opFrases-celular').addEventListener('click', (e) => getInfo('data/frases.json','F'));
+document.querySelector('#opCajasYbolsas-celular').addEventListener('click', (e) => getInfo('data/cajasYbolsas.json','C'));
 
 /* ---- Menu desplegable---- */
 const menuFrase = document.querySelector('.menu__frase');
@@ -27,12 +38,17 @@ menuFrase.addEventListener('click', function(e){
         if (menuDesplegable.display == 'none' || menuDesplegable.display == '') {
             menuDesplegable.display= 'block'
             menuIcono.transform = 'rotate(180deg)'
+            setTimeout(cerrarMenuDespegable,2000);
         } else{
-            menuDesplegable.display= 'none'
-            menuIcono.transform = 'rotate(90deg)'
+            cerrarMenuDespegable();
         }
     }
 })
+
+function cerrarMenuDespegable(){
+    menuDesplegable.display= 'none'
+    menuIcono.transform = 'rotate(90deg)'
+}
 
 /* ---- Modo dark ---- */
 const modoOscuro = document.querySelector('#darkmode__checkbox')
